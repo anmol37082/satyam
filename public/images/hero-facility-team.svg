@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none">
+  <defs>
+    <linearGradient id="wall" x1="1300" y1="0" x2="1300" y2="1080" gradientUnits="userSpaceOnUse"><stop stop-color="#DCE9E8"/><stop offset="1" stop-color="#A9C1BE"/></linearGradient>
+    <linearGradient id="glass" x1="1500" y1="130" x2="1500" y2="720" gradientUnits="userSpaceOnUse"><stop stop-color="#B9D9D6"/><stop offset="1" stop-color="#E4EFEB"/></linearGradient>
+    <linearGradient id="uniform" x1="1000" y1="400" x2="1000" y2="1050" gradientUnits="userSpaceOnUse"><stop stop-color="#F8FAF5"/><stop offset="1" stop-color="#DCE7E1"/></linearGradient>
+    <linearGradient id="pants" x1="1000" y1="760" x2="1000" y2="1080" gradientUnits="userSpaceOnUse"><stop stop-color="#324743"/><stop offset="1" stop-color="#1F302E"/></linearGradient>
+    <filter id="shadow" x="580" y="170" width="1030" height="1010" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="34"/></filter>
+  </defs>
+  <path fill="#263B38" d="M0 0h1920v1080H0z"/>
+  <path fill="url(#wall)" d="M760 0h1160v900H760z"/>
+  <path fill="url(#glass)" d="M1240 116h680v588h-680z"/>
+  <path stroke="#F7F8F2" stroke-width="20" d="M1465 116v588m232-588v588M1240 410h680"/>
+  <path fill="#829F91" d="M1250 690c92-164 187-162 281 0 102-195 202-171 294 0v36h-575v-36Z" opacity=".72"/>
+  <path fill="#D0D9D0" d="M760 0h480v900H760z"/>
+  <path fill="#B9C9C0" d="M0 700h1920v380H0z"/>
+  <path fill="#71867D" d="M0 850h1920v230H0z" opacity=".2"/>
+  <ellipse cx="1090" cy="991" fill="#142522" opacity=".27" rx="448" ry="74" filter="url(#shadow)"/>
+  <!-- facility professional -->
+  <path fill="url(#pants)" d="m856 699 360-13 52 394H997l-26-239-43 239H762l94-381Z"/>
+  <path fill="#F8F7F0" d="M975 716h130v140H975z"/>
+  <path fill="#182825" d="m763 1059 208-8-4 29H750c-13-1-13-14 13-21Zm245 0 260 4c26 1 32 15 4 17h-268l4-21Z"/>
+  <path fill="url(#uniform)" d="m907 414 123-33 121 34 98 291-119 47-27-59 3 91H820l6-91-30 60-111-51 113-256 109-37Z"/>
+  <path fill="#F4F7F1" d="m1005 400 31 16 32-16-8 136-25 28-25-28-5-136Z"/>
+  <path fill="#9EC84A" d="M1033 435h12l8 38-14 17-14-17 8-38Z"/>
+  <path fill="#344C45" d="M872 536h95v12h-95zm0 28h95v12h-95z" opacity=".7"/>
+  <path stroke="#AFC1B8" stroke-width="3" d="M1037 562v183"/>
+  <rect x="887" y="643" width="104" height="83" rx="8" fill="#F4F7F1" stroke="#BCCBC3" stroke-width="4"/>
+  <path fill="#324A43" d="M904 659h70v11h-70zm0 22h48v7h-48z" opacity=".75"/>
+  <!-- head and hair -->
+  <path fill="#BB805F" d="M953 266c0-74 48-120 104-120 70 0 111 49 111 126v82c0 93-51 141-109 141-62 0-106-53-106-141v-88Z"/>
+  <path fill="#243531" d="M946 306c-19-117 36-192 122-192 87 0 138 61 125 165l-37-71c-43 20-102 21-156 5l-54 93Z"/>
+  <path fill="#243531" d="M947 313c-18 59-18 114 2 156-37-6-67-49-61-101 5-35 28-54 59-55Zm241-16c35 23 47 60 40 103-5 34-25 57-56 67 22-47 23-102 16-170Z"/>
+  <path stroke="#754A39" stroke-width="7" stroke-linecap="round" d="M1007 336h28m62 0h27"/>
+  <path stroke="#8D5546" stroke-width="7" stroke-linecap="round" d="M1043 397c17 13 38 13 54 0"/>
+  <!-- arm and hand -->
+  <path fill="#BB805F" d="m744 558 90 48-59 145c-15 38-49 57-77 42-28-15-33-45-12-80l58-155Z"/>
+  <path fill="#BB805F" d="m1243 584 82 43 81 134c19 31 9 60-15 72-27 13-52 2-71-28l-93-134 16-87Z"/>
+  <!-- cleaning cart -->
+  <path fill="#F0F3EB" d="M1458 630h310l-34 272h-246l-30-272Z"/>
+  <path fill="#9EC84A" d="M1465 667h293l-8 51h-279l-6-51Z"/>
+  <path stroke="#314A43" stroke-width="15" d="m1492 900-25 83m239-83 23 83m-275-83h279"/>
+  <path fill="#6E9790" d="M1512 580h82v51h-82z"/>
+  <path fill="#9EC84A" d="M1589 541h26v89h-26z"/>
+  <path fill="#DFE8E0" d="M1450 574h77v56h-77z"/>
+  <path fill="#7F988C" d="M1458 584h60v9h-60zm0 18h48v6h-48z"/>
+  <!-- foreground floor -->
+  <path fill="#D4DED5" d="M0 914h1920v166H0z"/>
+  <path stroke="#BCCABF" stroke-width="4" d="M0 973h1920M540 914l-85 166m547-166-25 166m582-166 81 166"/>
+  <rect width="1920" height="1080" fill="#152321" fill-opacity=".16"/>
+</svg>
