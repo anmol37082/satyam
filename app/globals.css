@@ -3942,8 +3942,9 @@ p,
   background: #ffffff25;
   color: #fff;
   box-shadow: 0 8px 24px #51307835;
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  
 }
 
 .services-grid .service-card-content {
