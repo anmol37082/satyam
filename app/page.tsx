@@ -80,9 +80,9 @@ export default function Home() {
       </div>
 
       <h2>
-        ONE PARTNER.
+        One partner.
         <br />
-        <em>PEACE OF MIND.</em>
+        <em>Peace of mind.</em>
       </h2>
 
       <div className="intro-heading-line" />
