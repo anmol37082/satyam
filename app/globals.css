@@ -3955,8 +3955,9 @@ p,
   border-radius: 15px;
   background: #ffffff24;
   box-shadow: 0 12px 32px #51307825;
-  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  
 }
 
 .services-grid .service-card h3 {
@@ -3974,8 +3975,9 @@ p,
   background: #ffffff25;
   border: 1px solid #ffffff75;
   border-radius: 7px;
+    -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+
 }
 
 .services-grid .service-card:hover .service-card-cta {
