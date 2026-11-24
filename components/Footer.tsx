@@ -1,89 +1,210 @@
+
 import Link from "next/link";
-import { MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  ArrowUpRight,
+  Heart,
+  ShieldCheck,
+  Users,
+  Handshake,
+  ChevronRight,
+  Shield,
+  Brush,
+  Layers,
+} from "lucide-react";
 import { contact } from "@/lib/data";
+
+const exploreLinks = [
+  { label: "About SATYA", href: "/about" },
+  { label: "Our services", href: "/services" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Our people", href: "/team" },
+];
+
+const services = [
+  {
+    label: "Security services",
+    href: "/services/security-services",
+    icon: Shield,
+  },
+  {
+    label: "Housekeeping",
+    href: "/services/housekeeping-services",
+    icon: Brush,
+  },
+  {
+    label: "Patient care",
+    href: "/services/patient-care-services",
+    icon: Users,
+  },
+  {
+    label: "Floor cleaning",
+    href: "/services/single-disc-floor-cleaning",
+    icon: Layers,
+  },
+];
+
+const trustPoints = [
+  { label: "Professional", icon: ShieldCheck },
+  { label: "Reliable", icon: Users },
+  { label: "Trustworthy", icon: Handshake },
+];
+
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-cta">
-        <div className="container footer-cta-inner">
-          <div>
-            <span className="eyebrow light">
-              LET’S MAKE YOUR SPACE WORK BETTER
-            </span>
-            <h2>
-              One team. Many ways
-              <br />
-              <em>to make a difference.</em>
-            </h2>
+      <div className="footer-main">
+        <div className="container footer-grid">
+
+          {/* Brand column */}
+          <div className="footer-about">
+            <Link href="/" className="footer-brand">
+              <Image
+                src="/logo.png"
+                alt="SATYA Facility Services"
+                width={112}
+                height={112}
+              />
+              <span className="footer-brand-name">
+                <strong>SATYA<sup>®</sup></strong>
+                <small>FACILITY SERVICES</small>
+              </span>
+            </Link>
+
+            <p className="footer-description">
+              Clean spaces. Safer environments. Brighter tomorrow.
+              Your trusted partner for complete facility management
+              solutions.
+            </p>
+
+            <div className="footer-trust">
+              {trustPoints.map(({ label, icon: Icon }) => (
+                <div className="footer-trust-item" key={label}>
+                  <Icon aria-hidden="true" />
+                  <span>{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          <Link className="btn btn-lime" href="/contact">
-            Talk to SATYA <ArrowUpRight size={18} />
-          </Link>
+
+          {/* Explore column */}
+          <div className="footer-column">
+            <h4>Explore</h4>
+            <span className="footer-heading-line" />
+
+            <div className="footer-links">
+              {exploreLinks.map((item) => (
+                <Link href={item.href} key={item.label}>
+                  <ChevronRight aria-hidden="true" />
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Services column */}
+          <div className="footer-column">
+            <h4>Our Services</h4>
+            <span className="footer-heading-line" />
+
+            <div className="footer-services">
+              {services.map(({ label, href, icon: Icon }) => (
+                <Link href={href} key={label}>
+                  <span className="footer-service-icon">
+                    <Icon aria-hidden="true" />
+                  </span>
+                  <span>{label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact column */}
+          <div className="footer-column footer-contact">
+            <h4>Contact Us</h4>
+            <span className="footer-heading-line" />
+
+            <div className="footer-contact-list">
+              <div className="footer-contact-item">
+                <span className="footer-contact-icon">
+                  <MapPin />
+                </span>
+                <p>{contact.address}</p>
+              </div>
+
+              <a
+                className="footer-contact-item"
+                href="tel:+919815088606"
+              >
+                <span className="footer-contact-icon">
+                  <Phone />
+                </span>
+                <p>{contact.phone1}</p>
+              </a>
+
+              <a
+                className="footer-contact-item"
+                href="tel:+917717440566"
+              >
+                <span className="footer-contact-icon">
+                  <Phone />
+                </span>
+                <p>{contact.phone2}</p>
+              </a>
+
+              <a
+                className="footer-contact-item"
+                href={`mailto:${contact.email}`}
+              >
+                <span className="footer-contact-icon">
+                  <Mail />
+                </span>
+                <p>{contact.email}</p>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
-      <div className="container footer-grid">
-        <div>
-          <Link href="/" className="brand footer-brand">
-            <span className="brand-mark">S</span>
+
+      {/* Bottom copyright */}
+      <div className="footer-bottom">
+        <div className="container footer-bottom-inner">
+
+          <div className="footer-copyright">
             <span>
-              <b>SATYA</b>
-              <small>FACILITY SERVICES PVT. LTD.</small>
+              © {new Date().getFullYear()} SATYA Facility Services Pvt. Ltd.
+              All rights reserved.
             </span>
-          </Link>
-          <p>
-            Clean spaces. Safer environments. Brighter tomorrow. Your trusted
-            partner for complete facility management solutions.
-          </p>
-          <div className="footer-tags">
-            PROFESSIONAL <i /> RELIABLE <i /> TRUSTWORTHY
+
+            <span className="footer-credit-divider" />
+
+            <a
+              href="https://imazineus.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-credit"
+            >
+              <ArrowUpRight aria-hidden="true" />
+              <span>
+                Designed by <strong>Imazine Us</strong>
+              </span>
+              <Heart aria-hidden="true" className="footer-heart" />
+            </a>
           </div>
+
+          <div className="footer-bottom-right">
+            <span>Mohali · Kharar · Zirakpur · Panchkula</span>
+
+            <Link href="/contact">
+              Get in touch <ArrowUpRight />
+            </Link>
+          </div>
+
         </div>
-        <div>
-          <h4>Explore</h4>
-          <Link href="/about">About SATYA</Link>
-          <Link href="/services">Our services</Link>
-          <Link href="/gallery">Gallery</Link>
-          <Link href="/team">Our people</Link>
-        </div>
-        <div>
-          <h4>Our services</h4>
-          <Link href="/services/security-services">Security services</Link>
-          <Link href="/services/housekeeping-services">Housekeeping</Link>
-          <Link href="/services/patient-care-services">Patient care</Link>
-          <Link href="/services/single-disc-floor-cleaning">
-            Floor cleaning
-          </Link>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <p className="contact-line">
-            <MapPin /> {contact.address}
-          </p>
-          <p className="contact-line">
-            <Phone />
-            <a href="tel:+919815088606">{contact.phone1}</a>
-          </p>
-          <p className="contact-line">
-            <Phone />
-            <a href="tel:+917717440566">{contact.phone2}</a>
-          </p>
-          <p className="contact-line">
-            <Mail />
-            <a href={`mailto:${contact.email}`}>{contact.email}</a>
-          </p>
-        </div>
-      </div>
-      <div className="container copyright">
-        <span>
-          © {new Date().getFullYear()} SATYA Facility Services Pvt. Ltd. All
-          rights reserved.
-        </span>
-        <span>
-          Mohali · Kharar · Zirakpur · Panchkula{" "}
-          <Link href="/contact">
-            Get in touch <ArrowUpRight size={13} />
-          </Link>
-        </span>
       </div>
     </footer>
   );

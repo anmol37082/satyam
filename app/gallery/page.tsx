@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { X, ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { gallery } from "@/lib/data";
 const labels = [
   "Facility management",
@@ -44,8 +44,10 @@ export default function Gallery() {
             <em>Our service story.</em>
           </h1>
           <p>
-            Explore the original SATYA brochures and service visuals supplied
-            for this website.
+            Explore the original SATYA brochures and service visuals covering
+            security, housekeeping, patient care, gardening, glass cleaning,
+            floor care and manpower — the complete facility services story
+            presented in one visual gallery.
           </p>
         </div>
       </section>
@@ -80,11 +82,6 @@ export default function Gallery() {
                   fill
                   sizes="(max-width:700px) 50vw,25vw"
                 />
-                <span>
-                  <small>0{i + 1}</small>
-                  <b>{labels[i]}</b>
-                  <ArrowUpRight size={16} />
-                </span>
               </button>
             ))}
           </div>

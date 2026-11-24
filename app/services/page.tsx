@@ -22,8 +22,10 @@ export default function Services() {
             <em>One commitment.</em>
           </h1>
           <p>
-            Integrated facility support to help your spaces stay safe, clean,
-            cared for and ready for every day.
+            SATYA brings security, housekeeping, patient care, gardening and
+            specialist cleaning together in one integrated facility support
+            plan, delivered by trained teams for workplaces, healthcare
+            facilities and shared spaces.
           </p>
         </div>
       </section>

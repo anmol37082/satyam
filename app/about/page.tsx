@@ -29,8 +29,10 @@ export default function About() {
             <em>Respect for people.</em>
           </h1>
           <p>
-            Professional facility support shaped around the everyday needs of
-            the places people live, work and receive care.
+            SATYA provides trained security, housekeeping, patient care,
+            gardening and cleaning teams that help workplaces, healthcare
+            facilities and shared spaces stay safe, welcoming and cared for
+            every single day.
           </p>
         </div>
       </section>

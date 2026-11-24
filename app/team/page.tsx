@@ -77,8 +77,10 @@ export default function Team() {
             <em>the difference.</em>
           </h1>
           <p>
-            Behind every clean, safe and welcoming space is a team that cares
-            about the work.
+            Behind every clean, safe and welcoming space at SATYA is a trained
+            and verified team — uniformed security guards, housekeeping
+            professionals, patient care attendants and cleaning specialists who
+            take genuine pride in their work.
           </p>
         </div>
       </section>

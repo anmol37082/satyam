@@ -323,9 +323,6 @@ export default function Home() {
                 fill
                 sizes="60vw"
               />
-              <span>
-                COMPLETE FACILITY SOLUTIONS <ArrowUpRight />
-              </span>
             </Link>
             <Link href="/gallery" className="preview-tile">
               <Image
@@ -334,7 +331,6 @@ export default function Home() {
                 fill
                 sizes="30vw"
               />
-              <span>SPECIALIST FLOOR CARE</span>
             </Link>
             <Link href="/gallery" className="preview-tile">
               <Image
@@ -343,7 +339,6 @@ export default function Home() {
                 fill
                 sizes="30vw"
               />
-              <span>PATIENT CARE</span>
             </Link>
           </div>
         </div>

@@ -16,10 +16,18 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const updateScrolled = () => setScrolled(window.scrollY >= 36);
+    const updateScrolled = () => {
+      const scrollTop =
+        window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+      setScrolled(scrollTop >= 8);
+    };
     updateScrolled();
     window.addEventListener("scroll", updateScrolled, { passive: true });
-    return () => window.removeEventListener("scroll", updateScrolled);
+    document.addEventListener("scroll", updateScrolled, { passive: true, capture: true });
+    return () => {
+      window.removeEventListener("scroll", updateScrolled);
+      document.removeEventListener("scroll", updateScrolled, true);
+    };
   }, []);
 
   return (

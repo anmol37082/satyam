@@ -68,7 +68,12 @@ export default async function ServiceDetail({
             <span /> {service.eyebrow}
           </div>
           <h1>{service.name}</h1>
-          <p>{service.short}</p>
+          <p>
+            {service.name} from SATYA brings trained and verified staff, clear
+            daily routines, strict supervision and dependable support, helping
+            your workplace, healthcare facility or shared space stay safe,
+            clean and running smoothly every day.
+          </p>
           <a className="btn btn-lime service-hero-cta" href="#service-overview">
             Explore this service <ArrowRight size={17} />
           </a>

@@ -34,8 +34,10 @@ export default function Contact() {
             <em>your space.</em>
           </h1>
           <p>
-            Tell us what your facility needs — we’ll be happy to start a
-            conversation.
+            Tell us what your facility needs — security, housekeeping, patient
+            care, gardening or specialist cleaning — and our trained teams will
+            be happy to start a conversation and plan the right support with
+            you.
           </p>
         </div>
       </section>
