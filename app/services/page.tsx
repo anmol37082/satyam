@@ -37,19 +37,39 @@ export default function Services() {
                 <span /> OUR SERVICE PORTFOLIO
               </div>
               <h2>
-                Support for the
+                COMPLETE FACILITY SOLUTIONS.
                 <br />
-                <em>spaces that matter.</em>
+                <em>ONE PROFESSIONAL TEAM.</em>
               </h2>
             </div>
             <p>
-              Choose an individual service or speak with us about combining
-              multiple requirements into one facility support plan.
+              From maintaining clean and organised premises to providing
+              dependable security and personal care assistance, SATYA brings
+              essential facility services together to support the smooth
+              functioning of your space.
             </p>
           </div>
-          <div className="services-grid">
+          <div className="services-grid service-directory-grid">
             {services.map((s, i) => (
-              <ServiceCard key={s.slug} service={s} index={i} />
+              <ServiceCard
+                key={s.slug}
+                service={s}
+                index={i}
+                title={
+                  s.slug === "housekeeping-services"
+                    ? "Housekeeping & Cleaning Services"
+                    : undefined
+                }
+                cta={
+                  s.slug === "security-services"
+                    ? "Explore Security Services"
+                    : s.slug === "housekeeping-services"
+                      ? "Explore Cleaning Services"
+                      : s.slug === "patient-care-services"
+                        ? "Explore Patient Care"
+                        : undefined
+                }
+              />
             ))}
           </div>
         </div>

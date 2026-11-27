@@ -3,9 +3,10 @@ export const services = [
     slug: "security-services",
     fit: "For facilities looking for security manpower, surveillance support and supervision planned around their site requirements.",
     name: "Security Services",
+    tagline: "Trusted Security. Greater Confidence.",
     eyebrow: "SAFETY & PROTECTION",
     short:
-      "Professional, reliable and trustworthy security manpower for safer premises.",
+      "Professional security services with trained personnel and site supervision for secure, well-managed premises.",
     detail:
       "SATYA presents security manpower as a core part of its facility services. The brochure highlights male and female guards, 24×7 strict surveillance, reliable deployment and supervision tailored to site requirements.",
     icon: "shield",
@@ -21,9 +22,10 @@ export const services = [
     slug: "housekeeping-services",
     fit: "For workplaces and facilities that need regular housekeeping support from trained, verified and uniformed staff.",
     name: "Housekeeping Services",
+    tagline: "Clean Spaces. Consistent Standards.",
     eyebrow: "CLEAN, EVERY DAY",
     short:
-      "Trained housekeeping teams and dependable routines for cleaner spaces.",
+      "Professional housekeeping and commercial cleaning services for clean, organised and presentable workplaces.",
     detail:
       "SATYA’s housekeeping offering focuses on clean, organised and hygienic environments, supported by trained staff, quality service assurance and professional presentation.",
     icon: "sparkles",
@@ -39,9 +41,10 @@ export const services = [
     slug: "patient-care-services",
     fit: "For hospitals and home care settings seeking compassionate help with personal care, daily activities and companionship.",
     name: "Patient Care Services",
+    tagline: "Care that puts people first.",
     eyebrow: "CARE WITH COMPASSION",
     short:
-      "Compassionate assistance for hospitals, elderly care and home care.",
+      "Compassionate daily activity and personal care support in a familiar environment.",
     detail:
       "SATYA describes its patient care service as reliable, trained and compassionate support for hospitals and home care. The brochure lists personal care, daily activity assistance, medication reminders, companionship and post-surgery or elderly care.",
     icon: "heart",
@@ -57,9 +60,10 @@ export const services = [
     slug: "gardening-landscaping",
     fit: "For sites with gardens or outdoor green spaces that need regular upkeep and plant care.",
     name: "Gardening & Landscaping",
+    tagline: "Green spaces. Beautifully maintained.",
     eyebrow: "GREENER ENVIRONMENTS",
     short:
-      "Thoughtful green-space care for fresher, more welcoming surroundings.",
+      "Gardening and landscaping services for attractive, well-kept outdoor spaces.",
     detail:
       "SATYA’s gardening and landscaping brochure focuses on green-space maintenance and keeping outdoor environments cared for and presentable.",
     icon: "sprout",
@@ -74,8 +78,10 @@ export const services = [
     slug: "glass-cleaning",
     fit: "For facilities that want planned cleaning support for glass and window surfaces, with attention to the final finish.",
     name: "Glass Cleaning Services",
+    tagline: "Clear glass. A better impression.",
     eyebrow: "A CLEARER FIRST IMPRESSION",
-    short: "Professional glass cleaning for brighter, well-presented spaces.",
+    short:
+      "Glass cleaning services that remove dust and marks for a clear, presentable finish.",
     detail:
       "SATYA includes dedicated glass cleaning services in its facility portfolio, helping maintain clean and presentable glass surfaces.",
     icon: "panels",
@@ -90,9 +96,10 @@ export const services = [
     slug: "single-disc-floor-cleaning",
     fit: "For floors that need deeper scrubbing or polishing with single-disc machine support.",
     name: "Single Disc Floor Cleaning",
+    tagline: "A deeper clean for your floors.",
     eyebrow: "DEEP CLEAN. PERFECT FINISH.",
     short:
-      "Professional floor scrubbing and polishing with single-disc machine technology.",
+      "Commercial floor cleaning with single-disc machines to scrub and polish suitable surfaces.",
     detail:
       "The SATYA brochure describes deep floor cleaning to remove dirt, stains and tough marks from floor types. It highlights single-disc technology, safe and reliable cleaning, and trained operators.",
     icon: "brush",
@@ -108,9 +115,10 @@ export const services = [
     slug: "housekeeping-staff-training",
     fit: "For housekeeping teams that need practical guidance on cleaning techniques, schedules, materials and safety.",
     name: "Housekeeping Staff Training",
+    tagline: "Train Skilled Housekeeping Teams.",
     eyebrow: "PEOPLE. PROCESS. PERFORMANCE.",
     short:
-      "Practical training for consistent cleaning standards and safer routines.",
+      "Housekeeping staff training to strengthen cleaning skills, hygiene and safety practices.",
     detail:
       "SATYA’s training material highlights proper cleaning techniques, daily cleaning schedules, use of cleaning materials and safety precautions.",
     icon: "training",
@@ -125,9 +133,10 @@ export const services = [
     slug: "uniforms-manpower",
     fit: "For facilities seeking uniformed housekeeping professionals and manpower support for site requirements.",
     name: "Uniforms & Manpower Supply",
+    tagline: "The right people. Ready for the job.",
     eyebrow: "PROFESSIONAL TEAMS",
     short:
-      "Uniformed and presentable personnel for day-to-day facility operations.",
+      "Manpower supply for housekeeping, security and facility operations, with uniforms for a professional appearance.",
     detail:
       "SATYA’s brochures show uniformed housekeeping professionals and manpower support as part of its facility services offering.",
     icon: "users",
@@ -142,9 +151,10 @@ export const services = [
     slug: "office-cleaning",
     fit: "For offices looking for support to keep work areas clean, neat and presentable.",
     name: "Office Cleaning Services",
+    tagline: "Your Workplace, Maintained to Perfection.",
     eyebrow: "WORKPLACE CLEANLINESS",
     short:
-      "Cleaning support to keep office environments neat, hygienic and welcoming.",
+      "Office cleaning services for hygienic, welcoming workspaces.",
     detail:
       "Office cleaning is named in SATYA’s service overview brochure as part of its facility support portfolio.",
     icon: "sparkles",
@@ -159,9 +169,10 @@ export const services = [
     slug: "hospitality-staff",
     fit: "For facilities that require hospitality staff support and professional presentation.",
     name: "Hospitality Staff",
+    tagline: "Skilled Staff. Exceptional Hospitality.",
     eyebrow: "SERVICE WITH A WELCOME",
     short:
-      "Hospitality staff support as part of SATYA’s facility manpower portfolio.",
+      "Hospitality staff training in service etiquette and guest care for exceptional service.",
     detail:
       "Hospitality staff is listed in SATYA’s service overview brochure among the manpower and facility services offered.",
     icon: "heart",

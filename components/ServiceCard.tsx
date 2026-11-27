@@ -12,6 +12,7 @@ import {
   Users,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 import { serviceImages, services } from "@/lib/data";
 
 const icons: Record<string, LucideIcon> = {
@@ -27,9 +28,17 @@ const icons: Record<string, LucideIcon> = {
 
 export default function ServiceCard({
   service,
+  title,
+  tagline,
+  description,
+  cta,
 }: {
   service: (typeof services)[number];
   index: number;
+  title?: string;
+  tagline?: string;
+  description?: ReactNode;
+  cta?: string;
 }) {
   const Icon = icons[service.icon];
 
@@ -47,10 +56,15 @@ export default function ServiceCard({
         <Icon size={28} />
       </span>
       <div className="service-card-content">
-        <h3>{service.name}</h3>
-        <p>{service.short}</p>
+        <h3>{title ?? service.name}</h3>
+        {(tagline ?? service.tagline) && (
+          <strong className="service-card-tagline">
+            {tagline ?? service.tagline}
+          </strong>
+        )}
+        <p>{description ?? service.short}</p>
         <span className="service-card-cta">
-          Explore Service <ArrowRight size={16} />
+          {cta ?? `Explore ${title ?? service.name}`} <ArrowRight size={16} />
         </span>
       </div>
     </Link>

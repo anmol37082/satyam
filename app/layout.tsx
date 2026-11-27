@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollAnimations from "@/components/ScrollAnimations";
 export const metadata: Metadata = {
   title: "SATYA Facility Services Pvt. Ltd. | Complete Facility Management",
   description:
@@ -19,6 +20,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <ScrollAnimations />
       </body>
     </html>
   );

@@ -6,24 +6,16 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const slides = [
   {
-    src: "/images/satya-team-hero.png",
-    label: "Our professional facility services team",
+    src: "/images/homehero1.jpeg",
+    label: "SATYA facility services",
   },
   {
-    src: "/images/security.webp",
-    label: "SATYA security services",
+    src: "/images/homehero2.jpeg",
+    label: "Professional facility management",
   },
   {
-    src: "/images/housekeeping-services.webp",
-    label: "Professional housekeeping services",
-  },
-  {
-    src: "/images/gardening-landscaping.webp",
-    label: "Gardening and landscaping services",
-  },
-  {
-    src: "/images/single-disc-floor-cleaning.webp",
-    label: "Single disc floor cleaning services",
+    src: "/images/homehero3.jpeg",
+    label: "SATYA professional service team",
   },
 ];
 
@@ -81,14 +73,14 @@ export default function HeroSlider() {
       <div className="hero-shade" aria-hidden="true" />
       <div className="container hero-content">
         <h1>
-          <em>Complete Facility</em>
+          <em>One Partner for All</em>
           <br />
-          Management Solutions
+          Your Facility Needs.
         </h1>
         <p>
-          From security and housekeeping to patient care, cleaning and manpower,
-          our trained teams help workplaces, healthcare facilities and shared
-          spaces stay safe, clean and running smoothly.
+          From professional housekeeping, commercial and deep home cleaning to
+          security, patient care and manpower services, we help keep your spaces
+          clean, safe and well-managed.
         </p>
       </div>
       <div

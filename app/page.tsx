@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -80,38 +80,44 @@ export default function Home() {
       </div>
 
       <h2>
-        One partner.
+        <em>The care behind every</em>
         <br />
-        <em>Peace of mind.</em>
+        well-managed space.
       </h2>
 
       <div className="intro-heading-line" />
 
       <p className="lead">
-        Well-managed spaces go beyond clean floors: they bring safety,
-        care, consistency and a team proud of its work.
+        A well-managed space is more than what you see. It's the comfort of a
+        clean environment, the confidence of reliable security and the
+        reassurance of having the right care when it matters.
       </p>
 
       <p>
-        SATYA Facility Services Pvt. Ltd. provides security, housekeeping,
-        patient care, specialist cleaning, landscaping and manpower
-        support—with the right people and clear service routines.
+        SATYA Facility Services Pvt. Ltd. brings professional cleaning,
+        housekeeping, security, patient care and manpower support together
+        under one roof. We help workplaces and healthcare environments stay
+        clean, secure and well-managed with services built around their
+        everyday needs.
       </p>
 
       <p>
-        We help workplaces, healthcare environments and shared spaces
-        run smoothly every day.
+        From maintaining your space to supporting the people in it, we take
+        care of the essentials that make everyday life and work run smoothly.
       </p>
 
       <div className="intro-points">
         <span>
-          <CheckCircle2 /> Professional presentation
+          <CheckCircle2 /> Professional service
         </span>
         <span>
-          <CheckCircle2 /> Site-focused support
+          <CheckCircle2 /> Support that fits your needs
         </span>
         <span>
           <CheckCircle2 /> People-first service
+        </span>
+        <span>
+          <CheckCircle2 /> One reliable service partner
         </span>
       </div>
 
@@ -135,54 +141,56 @@ export default function Home() {
               <span /> THE SATYA DIFFERENCE
             </div>
             <h2>
-              Not just a service.
+              The Difference Is
               <br />
-              <em>A standard of care.</em>
+              <em>in How We Deliver.</em>
             </h2>
             <p>
-              We believe reliable facility management comes from the right
-              people, clear expectations and attention to the everyday details
-              that are easy to overlook.
+              A well-managed facility takes more than people on-site. It takes
+              accountability, organised operations and consistent service
+              standards. At SATYA Facility Services Pvt. Ltd. we bring the
+              people, processes and expertise together to keep your facility
+              running at its best.
             </p>
             <Link className="btn btn-lime" href="/about">
-              Why SATYA <ArrowUpRight size={17} />
+              Discover the SATYA Difference <ArrowUpRight size={17} />
             </Link>
           </div>
           <ScrollReveal className="difference-cards reveal-stagger">
             <article>
               <span>01</span>
               <ShieldCheck />
-              <h3>People you can rely on</h3>
+              <h3>The right people for the job</h3>
               <p>
-                Trained and verified staff, uniformed professionals and security
-                manpower for site requirements.
+                Trained, verified personnel deliver dependable security,
+                housekeeping and manpower support for your facility.
               </p>
             </article>
             <article>
               <span>02</span>
               <ClipboardCheck />
-              <h3>Work with a process</h3>
+              <h3>Standards that show in every space</h3>
               <p>
-                Daily cleaning schedules, proper techniques, use of cleaning
-                materials and safety precautions.
+                Planned routines, effective cleaning methods and safe practices
+                keep your premises consistently well-maintained.
               </p>
             </article>
             <article>
               <span>03</span>
               <Sparkles />
-              <h3>Quality in the details</h3>
+              <h3>Quality you can count on</h3>
               <p>
-                Service assurance, strict supervision and attention to the way
-                every space looks and feels.
+                Regular monitoring and careful execution uphold our
+                housekeeping, security and cleaning standards.
               </p>
             </article>
             <article>
               <span>04</span>
               <HeartHandshake />
-              <h3>Solutions shaped around you</h3>
+              <h3>Multiple services. One point of responsibility.</h3>
               <p>
-                Customized support for your facility, from a single service to a
-                combination of essential services.
+                Bring security, specialist cleaning, patient care and manpower
+                together with one reliable service partner.
               </p>
             </article>
           </ScrollReveal>
@@ -193,23 +201,43 @@ export default function Home() {
           <div className="section-heading">
             <div>
               <div className="eyebrow">
-                <span /> WHAT WE DO
+                <span /> COMPLETE FACILITY SOLUTIONS.
               </div>
               <h2>
-                Complete support.
-                <br />
-                <em>One trusted team.</em>
+                <em>ONE PROFESSIONAL TEAM.</em>
               </h2>
             </div>
             <p>
-              Explore our facility services — each designed to support cleaner,
-              safer and more welcoming environments.
+              From maintaining clean and organised premises to providing
+              dependable security and personal care assistance, SATYA brings
+              essential facility services together to support the smooth
+              functioning of your space.
             </p>
           </div>
           <div className="services-grid">
-            {services.slice(0, 3).map((s, i) => (
-              <ServiceCard key={s.slug} service={s} index={i} />
-            ))}
+            <ServiceCard
+              service={services[0]}
+              index={0}
+              tagline="Trusted Security. Greater Confidence."
+              description={<>Our <strong>professional security services</strong> provide trained guards to help keep your premises secure.</>}
+              cta="Explore Security Services"
+            />
+            <ServiceCard
+              service={services[1]}
+              index={1}
+              title="Housekeeping & Cleaning Services"
+              tagline="Clean Spaces. Consistent Standards."
+              description={<>Our <strong>professional housekeeping</strong> and <strong>commercial cleaning services</strong> keep workplaces clean and presentable.</>}
+              cta="Explore Cleaning Services"
+            />
+            <ServiceCard
+              service={services[2]}
+              index={2}
+              title="Patient Care Services"
+              tagline="Personal Care. Professional Assistance."
+              description={<>Our <strong>home patient care</strong>, <strong>General Duty Assistant</strong> and <strong>elderly caretaker services</strong> support everyday care.</>}
+              cta="Explore Patient Care"
+            />
           </div>
           <div className="services-explore">
             <Link className="btn btn-dark" href="/services">
@@ -226,47 +254,50 @@ export default function Home() {
                 <span /> HOW WE WORK
               </div>
               <h2>
-                A thoughtful process.
+                A clear approach.
                 <br />
-                <em>A better-run space.</em>
+                <em>Better results.</em>
               </h2>
             </div>
             <p>
-              We keep the approach clear and practical — so service expectations
-              are understood from the start.
+              We understand your facility's needs, plan the right services and
+              set clear standards to keep your space running smoothly.
             </p>
           </div>
           <div className="process-grid">
             <article>
               <MapPin />
-              <h3>Understand your space</h3>
+              <h3>Understand your requirements</h3>
               <p>
-                We start with your site, its daily activity and the services you
-                need.
+                We assess your premises and daily needs, from <strong>commercial
+                cleaning services</strong> and housekeeping to security and
+                patient care.
               </p>
             </article>
             <article>
               <Users />
-              <h3>Plan the right team</h3>
+              <h3>Plan the right support</h3>
               <p>
-                Identify the right service support and manpower for the
-                requirement.
+                We match services and manpower to your needs, from
+                <strong> security guard services</strong> to <strong>General
+                Duty Assistant services</strong>.
               </p>
             </article>
             <article>
               <ClipboardCheck />
-              <h3>Set clear routines</h3>
+              <h3>Establish clear standards</h3>
               <p>
-                Agree on schedules, responsibilities, cleaning practices and
-                site expectations.
+                We set clear schedules and routines for <strong>professional
+                housekeeping services</strong> and <strong>commercial cleaning
+                services</strong>.
               </p>
             </article>
             <article>
               <Star />
-              <h3>Focus on consistency</h3>
+              <h3>Maintain service standards</h3>
               <p>
-                Support the environment with supervision, service assurance and
-                attention to detail.
+                Regular supervision and review help keep service consistent and
+                your premises clean, secure and well-managed.
               </p>
             </article>
           </div>
@@ -343,6 +374,44 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="section testimonials-section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow">
+                <span /> CLIENT EXPERIENCES
+              </div>
+              <h2>
+                Trusted service.
+                <br />
+                <em>Real feedback.</em>
+              </h2>
+            </div>
+            <p className="testimonials-intro">
+              We value the experiences of the people and teams we support.
+            </p>
+            <Link className="btn btn-dark testimonials-read-all" href="/reviews">
+              Read all <ArrowUpRight size={17} />
+            </Link>
+          </div>
+          <div className="testimonials-grid">
+            {["Facility management", "Housekeeping", "Patient care"].map((service) => (
+              <article className="testimonial-card" key={service}>
+                <span className="testimonial-mark" aria-hidden="true">&ldquo;</span>
+                <span className="testimonial-label">{service}</span>
+                <p>Approved client feedback will appear here.</p>
+                <div className="testimonial-author">
+                  <span className="testimonial-avatar" aria-hidden="true">SATYA</span>
+                  <span>
+                    <strong>Client name</strong>
+                    <small>Organization</small>
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="coverage-section">
         <div className="container coverage-inner">
           <div>
@@ -355,7 +424,7 @@ export default function Home() {
               <em>Ready to support.</em>
             </h2>
             <p>
-              SATYA’s brochure highlights service locations across the Tricity
+              SATYAâ€™s brochure highlights service locations across the Tricity
               and nearby areas.
             </p>
           </div>

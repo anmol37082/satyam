@@ -260,8 +260,10 @@ h1 em {
 }
 /* hero */
 .hero-home {
-  height: min(790px, calc(100vh - 122px));
-  min-height: 690px;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
   position: relative;
   overflow: hidden;
   background: var(--navy);
@@ -1781,6 +1783,7 @@ h1 em {
   .hero-home {
     height: auto;
     min-height: 760px;
+    aspect-ratio: auto;
   }
   .hero-photo img {
     object-position: 58% center;
@@ -2112,6 +2115,29 @@ h1 em {
     min-height: 760px;
     padding: 90px 0 70px;
   }
+}
+
+/* Let service directory cards fit their full descriptions. */
+.services-grid.service-directory-grid .service-card-content {
+  height: auto;
+  min-height: 0;
+  flex: 0 0 auto;
+}
+
+.services-grid.service-directory-grid .service-card-cta {
+  margin-top: 8px;
+}
+
+
+/* Service directory cards can hold longer descriptions than the home cards. */
+.service-directory-grid .service-card-content {
+  height: auto;
+  min-height: 250px;
+  flex: 0 0 auto;
+}
+
+.service-directory-grid .service-card-cta {
+  margin-top: 8px;
 }
 
 .ribbon-track,
@@ -2534,7 +2560,8 @@ select {
   }
 }
 .service-card {
-  min-height: 430px;
+  height: 470px;
+  min-height: 470px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -2608,6 +2635,12 @@ select {
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.02em;
+}
+.service-card-tagline {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.4;
 }
 .service-card p {
   margin: 0 0 16px;
@@ -3364,7 +3397,8 @@ select {
     gap: 12px;
   }
   .service-card {
-    min-height: 400px;
+    height: 450px;
+    min-height: 450px;
   }
   .service-card h3 {
     font-size: 18px;
@@ -3559,10 +3593,14 @@ select {
   font-family: "Poppins", sans-serif;
   font-size: clamp(30px, 3.8vw, 48px);
   line-height: 1.12;
-  letter-spacing: 0;
+  letter-spacing: -0.055em;
   font-weight: 400;
   color: var(--navy);
   margin: 22px 0 12px;
+}
+
+.hero-home h1 {
+  letter-spacing: -0.055em !important;
 }
 
 .intro-section .intro-copy h2 em {
@@ -4027,7 +4065,10 @@ p {
   position: relative;
   z-index: 2;
   width: 100%;
-  flex: 0 0 auto;
+  box-sizing: border-box;
+  height: 250px;
+  min-height: 0;
+  flex: 0 0 250px;
   margin-top: auto;
   padding: 22px;
   border: 1px solid #ffffff45;
@@ -4048,9 +4089,11 @@ p {
   color: #f0f4f8;
   font-size: 14px;
   line-height: 1.55;
+  margin-bottom: 10px;
 }
 
 .services-grid .service-card-cta {
+  margin-top: 8px;
   background: #ffffff25;
   border: 1px solid #ffffff75;
   border-radius: 7px;
@@ -5665,5 +5708,309 @@ h6 {
       rgba(40, 31, 50, 0.32) 84%,
       rgba(40, 31, 50, 0) 100%
     );
+  }
+}
+
+.testimonials-section {
+  background: #f5f7fa;
+}
+
+.testimonials-intro {
+  max-width: 360px;
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65 !important;
+}
+
+.testimonials-read-all {
+  flex: none;
+  margin-bottom: 4px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  position: relative;
+  min-height: 245px;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #e7eaf0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(25, 35, 55, 0.05);
+}
+
+.testimonial-mark {
+  display: block;
+  height: 60px;
+  color: var(--orange);
+  font: 700 58px/1 Georgia, serif;
+}
+
+.testimonial-label {
+  display: inline-block;
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.testimonial-card > p {
+  min-height: 44px;
+  margin: 0 0 24px;
+  color: #596579;
+  font-size: 16px;
+  line-height: 1.5 !important;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-top: 17px;
+  border-top: 1px solid #edf0f4;
+}
+
+.testimonial-avatar {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fdf0e7;
+  color: var(--orange);
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.testimonial-author strong,
+.testimonial-author small {
+  display: block;
+}
+
+.testimonial-author strong {
+  color: var(--navy);
+  font-size: 13px;
+}
+
+.testimonial-author small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.reviews-page-heading {
+  margin-bottom: 32px;
+}
+
+.reviews-page-heading h1 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(38px, 5vw, 52px);
+  line-height: 1.1 !important;
+}
+
+.coverage-section {
+  background: #fff;
+}
+
+.client-list-section {
+  background: var(--paper);
+}
+
+.client-list-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.client-list-card {
+  position: relative;
+  min-height: 230px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px #17121d08;
+}
+
+.client-list-index {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  color: #a3adbb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.client-list-card > svg {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 5px;
+  color: var(--orange);
+}
+
+.client-list-card strong {
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.client-list-card p {
+  max-width: 360px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55 !important;
+  text-wrap: balance;
+}
+
+.client-list-card small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .client-list-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .client-list-grid {
+    gap: 10px;
+  }
+
+  .client-list-card {
+    min-height: 210px;
+    padding: 22px 18px;
+  }
+
+  .client-list-card strong {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .testimonial-card {
+    min-height: 0;
+    padding: 23px;
+  }
+
+  .testimonials-read-all {
+    margin-top: 18px;
+  }
+}
+
+/* Diagonal shine hover for the site's call-to-action buttons. */
+.btn,
+.nav .nav-cta,
+.intro-section .text-link {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn::before,
+.nav .nav-cta::before,
+.intro-section .text-link::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -30px;
+  width: 6px;
+  height: 120%;
+  background: #fff;
+  transform: skewX(-45deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.btn:hover::before,
+.nav .nav-cta:hover::before,
+.intro-section .text-link:hover::before {
+  left: calc(100% + 30px);
+}
+
+.scroll-reveal-text,
+.scroll-reveal-card {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.25s ease;
+}
+
+.scroll-reveal-card {
+  transition-delay: var(--scroll-stagger, 0ms);
+}
+
+.scroll-reveal-text.scroll-is-visible,
+.scroll-reveal-card.scroll-is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal-text,
+  .scroll-reveal-card,
+  .scroll-reveal-text.scroll-is-visible,
+  .scroll-reveal-card.scroll-is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn::before,
+  .nav .nav-cta::before,
+  .intro-section .text-link::before {
+    transition: none;
+  }
+}
+
+/* Keep inner page heroes on the same responsive ratio as the home hero. */
+.page-hero,
+.service-detail-hero {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .page-hero,
+  .service-detail-hero {
+    height: auto;
+    min-height: 760px;
+    aspect-ratio: auto;
+    padding: 90px 0 70px;
   }
 }

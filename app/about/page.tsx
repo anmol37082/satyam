@@ -7,7 +7,33 @@ import {
   Target,
   Eye,
   CheckCircle2,
+  Building2,
+  Users,
 } from "lucide-react";
+
+const clientSectors = [
+  {
+    title: "Healthcare & hospitals",
+    description: "Housekeeping, security and patient-care support for healthcare environments.",
+    icon: HeartHandshake,
+  },
+  {
+    title: "Offices & workplaces",
+    description: "Facility teams that help workplaces stay clean, safe and welcoming.",
+    icon: Building2,
+  },
+  {
+    title: "Home-care settings",
+    description: "Compassionate assistance with daily activities and personal care.",
+    icon: Users,
+  },
+  {
+    title: "Shared spaces & facilities",
+    description: "Housekeeping, security and upkeep for the spaces people use every day.",
+    icon: ShieldCheck,
+  },
+];
+
 export default function About() {
   return (
     <>
@@ -64,28 +90,33 @@ export default function About() {
               <span /> WHO WE ARE
             </div>
             <h2>
-              One partner.
+              <em>The care behind every</em>
               <br />
-              <em>Peace of mind.</em>
+              well-managed space.
             </h2>
             <div className="intro-heading-line" />
             <p className="lead">
-              SATYA Facility Services Pvt. Ltd. brings essential facility
-              support together under one roof.
+              A well-managed space is more than what you see. It's the comfort
+              of a clean environment, the confidence of reliable security and
+              the reassurance of having the right care when it matters.
             </p>
             <p>
-              Our portfolio includes security services, housekeeping, patient
-              care, gardening and landscaping, glass cleaning, floor cleaning,
-              training, uniforms and manpower support.
+              SATYA Facility Services Pvt. Ltd. brings professional cleaning,
+              housekeeping, security, patient care and manpower support
+              together under one roof. We help workplaces and healthcare
+              environments stay clean, secure and well-managed with services
+              built around their everyday needs.
             </p>
             <p>
-              We help workplaces, healthcare environments and shared spaces
-              run smoothly with professional, reliable and trustworthy teams.
+              From maintaining your space to supporting the people in it, we
+              take care of the essentials that make everyday life and work run
+              smoothly.
             </p>
             <div className="intro-points">
-              <span><CheckCircle2 /> Professional presentation</span>
-              <span><CheckCircle2 /> Site-focused support</span>
+              <span><CheckCircle2 /> Professional service</span>
+              <span><CheckCircle2 /> Support that fits your needs</span>
               <span><CheckCircle2 /> People-first service</span>
+              <span><CheckCircle2 /> One reliable service partner</span>
             </div>
             <div className="intro-bottom">
               <Link className="text-link" href="/services">
@@ -94,7 +125,40 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>      <section className="values-section section">
+      </section>
+      <section className="client-list-section section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow">
+                <span /> SECTORS WE SUPPORT
+              </div>
+              <h2>
+                Spaces we
+                <br />
+                <em>help care for.</em>
+              </h2>
+            </div>
+            <p>
+              Our facility and care teams support healthcare, workplace and
+              shared environments.
+            </p>
+          </div>
+          <div className="client-list-grid">
+            {clientSectors.map(({ title, description, icon: Icon }, index) => (
+              <article className="client-list-card" key={title}>
+                <span className="client-list-index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <Icon aria-hidden="true" />
+                <strong>{title}</strong>
+                <p>{description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="values-section section">
         <div className="container">
           <div className="section-heading">
             <div>
