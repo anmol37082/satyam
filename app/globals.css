@@ -6014,3 +6014,10 @@ h6 {
     padding: 90px 0 70px;
   }
 }
+
+@media (max-width: 900px) {
+  .header-logo,
+  .header.scrolled .header-logo {
+    transform: scale(1) !important;
+  }
+}
